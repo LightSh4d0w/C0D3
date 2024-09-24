@@ -1,0 +1,63 @@
+import time
+
+print("\n\n\nHi, my name is HEICKEL RAYNARA RUSTIADI")
+time.sleep(2)
+print("I'm currently working on my coding assignment.")
+time.sleep(2)
+print("This whole code contains multiplication,calculating a square, Name input, and sum function")
+time.sleep(4)
+print("oh yeah my student ID is 2304322")
+time.sleep(2)
+print("enjoy :3")
+time.sleep(2)
+
+
+#multiplication of four integer values
+print("\nMULTIPLICATION OF FOUR INTEGER VALUES")
+A=int(input("\nWrite Value of Variabel A : "))
+B=int(input("Write Value of Variabel B : "))
+C=int(input("Write Value of Variabel C : "))
+D=int(input("Write Value of Variabel D : "))
+
+Result=A*B*C*D
+print("\nCalculating...")
+time.sleep(3)
+
+print("\nThe result of the multiplication between",A,",",B,",",C,",and",D,"is",Result)
+
+# Calculating the area and the perimeter of a square
+print("\n\n\nCALCULATING THE AREA AND THE PERIMETER OF A SQUARE")
+Side=int(input("\nWrite Value of the side : "))
+
+print("\nCalculating the area and the perimeter of a square with",Side,"cm....\n")
+ResultOfArea=Side*Side
+ResultOfPerimeter=4*Side
+time.sleep(3)
+print("\nThe square with",Side,"cm side has total area of",ResultOfArea,"cm² and total perimeter of",ResultOfPerimeter,"cm")
+
+#First Name, Last Name
+print("\n\n\nFISRT NAME AND LAST NAME USER")
+FirstName=input("Please write your first name kiddo: ")
+LastName=input("Honestly, idc your last name but whatever: ")
+
+print("\ncompiling...")
+time.sleep(3)
+
+print("\nYour full name is",LastName,",",FirstName,".\nWelcome",FirstName)
+
+#Sum two integers
+print("\n\n\nSUM TWO INTEGERS 3 TIMES")
+print("Please write two integers in the empty space below!")
+print("(Contoh Bilangan Bulat :...,-100,-3,-2,-1,0,1,2,3,100...)")
+for i in range(3):
+    BilBul1 = int(input("Please input the first number: "))
+    BilBul2 = int(input("Please input the second number: "))
+    sum=BilBul1+BilBul2
+    print("\nCalculating...\n")
+    time.sleep(3)
+    print("The sum is",sum,"\n\n")
+
+time.sleep(3)
+print("\n\n\n\nProblem number 1, 2, 3, and 4 is done")
+time.sleep(2)
+print("Number 5 is in other file...")
