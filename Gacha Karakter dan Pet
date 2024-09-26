@@ -1,0 +1,23 @@
+import random
+import time
+
+Karakter_list = ["vavavuvu","Alomani","Penyihir", "Goblin", "Ksatria Hitam", "Ksatria Cahaya", "Golem Batu", "Budak", "Prajurit", "Pemamah", "Pemburu", "Hantu", "Naga", "Manusia Harimau", "Garuda Bird Langka"]
+Elemen_list = ["Air", "Api", "Udara", "Tanah", "Petir", "Ilmu Hitam", "Es", "Darah", "Lava"]
+Pet_list = ["Bayi Naga", "Mini Goblin", "Elang", "Harimau", "Kucing", "Ular", "Serigala", "Landak", "Katak", "Anjing"]
+
+def gacha():
+    Karakter = random.choice(Karakter_list)
+    Level = random.randint(1,100)
+    Elemen = random.choice(Elemen_list)
+    Pet = random.choice(Pet_list)
+    return Karakter, Level, Elemen, Pet
+karakter_dapatkan, level_dapatkan, elemen_dapatkan, pet_dapatkan = gacha()
+
+time.sleep(1)
+print("\nmengambil karakter...")
+time.sleep(4)
+print("\nSELAMATT!!!")
+time.sleep(2)
+print(f"Kamu mendapatkan {karakter_dapatkan} level {level_dapatkan} dengan elemen {elemen_dapatkan}")
+time.sleep(1)
+print(f"Pet mu adalah {pet_dapatkan}")
