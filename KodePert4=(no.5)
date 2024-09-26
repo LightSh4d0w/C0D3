@@ -1,0 +1,86 @@
+#PROGRAM 1
+#Problem List : 
+#1. Sintaks in input... int(input)("enter...")
+#2. print = ...
+#3. Inconsistency uses of >=
+
+x = int(input("Enter a number: "))
+y = 4
+
+result = x > y
+print(x, ">", y, "=", result)
+result = x == y
+print(x, "==", y, "=", result)
+result = x + x >=y
+print(x, ">=", y, "=", result)
+
+#PROGRAM 2
+#Problem list :
+#1. The wrong using of multification symbol x
+#2. The formula of circle
+
+print("\n\nLets calculate the area of a circle!")
+print("The formula to calculate the area is \nA = pi x r^2")
+r = int(input("Enter the radius of a circle: "))
+pi = 3.14
+area = pi*r**2
+
+print("\nThe area of a circle with radius",r,"is:", area)
+
+#PROGRAM 3
+#Problem List :
+#1. printf
+#2. The words of Name, NIM, dan Major not match with the variable
+#3. int is not for text
+#4. Using print for blankspace
+
+print("\n\nWelcome to the class!")
+Name = input("Enter your name: ")
+NIM = int(input("Enter your student ID (ex : 2346xxx): "))
+Major = input("Enter your major: ")
+
+print("\nHello, Welcome", Name)
+print("Your student ID is", NIM)
+print("You are a student majoring in", Major)
+
+#PROGRAM 4
+#Problem List :
+#1. int is not for decimal number
+#2. Point after text in the print
+#3. Idk if that is comment or just random copypaste that i should erase it. Iam gonna think its a comment anway
+decnum = float(input("\n\nEnter a decimal number (e.g. 17.7): "))#Enter a decimal number (e.g. 17.7)
+negnum = int(input("Enter a negative number (e.g. -17): "))#Enter a negative number (e.g. -17)
+result = (decnum + negnum) / 2
+print("The average obtained is: ", result)
+
+#PROGRAM 5
+#Problem List :
+#1. Lack of int for the number input
+#2. Theres no variable "number3"
+#3. No coma (,) before the result
+#4. There might be confusion while typing the number without context
+#5. Word prnt
+print("\n\nenter the first number:")
+number1=int(input("> "))
+print("enter the second number:")
+number2=int(input("> "))
+print("enter the third number:")
+number3=int(input("> "))
+result=number1+number2+number3
+print("\naddition of the three integer:",result)
+
+#PROGRAM 6
+#Problem List :
+#1. No Parentheses after input
+#2. No context for first input
+#3. No input for number3
+#4. The print and the variable "number4" is separated, also no int.
+#5. Result word with letter l is replaced by 1."just like a needle in a haystack" ahh number lol
+
+number1=int(input("\n\nenter the first integer:"))
+number2=int(input("enter the second integer:"))
+number3=int(input("enter the third integer:"))
+number4=int(input("enter the fourth number:"))
+
+result=number1*number3*number3*number3
+print("the multiplication of the four integer:", result)
