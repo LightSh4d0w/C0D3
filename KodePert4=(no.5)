@@ -82,5 +82,5 @@ number2=int(input("enter the second integer:"))
 number3=int(input("enter the third integer:"))
 number4=int(input("enter the fourth number:"))
 
-result=number1*number3*number3*number3
+result=number1*number2*number3*number4
 print("the multiplication of the four integer:", result)
