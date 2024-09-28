@@ -80,7 +80,7 @@ print("\naddition of the three integer:",result)
 number1=int(input("\n\nenter the first integer:"))
 number2=int(input("enter the second integer:"))
 number3=int(input("enter the third integer:"))
-number4=int(input("enter the fourth number:"))
+number4=int(input("enter the fourth integer:"))
 
 result=number1*number2*number3*number4
 print("the multiplication of the four integer:", result)
