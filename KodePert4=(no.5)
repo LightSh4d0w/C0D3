@@ -4,7 +4,7 @@
 #2. print = ...
 #3. Inconsistency uses of >=
 
-x = int(input("Enter a number: "))
+x = int(input("\n\nEnter a number: "))
 y = 4
 
 result = x > y
@@ -75,7 +75,7 @@ print("\naddition of the three integer:",result)
 #2. No context for first input
 #3. No input for number3
 #4. The print and the variable "number4" is separated, also no int.
-#5. Result word with letter l is replaced by 1."just like a needle in a haystack" ahh number lol
+#5. Result word with letter l is replaced by 1."just like a needle in a haystack" ahh number
 
 number1=int(input("\n\nenter the first integer:"))
 number2=int(input("enter the second integer:"))
@@ -83,4 +83,4 @@ number3=int(input("enter the third integer:"))
 number4=int(input("enter the fourth integer:"))
 
 result=number1*number2*number3*number4
-print("the multiplication of the four integer:", result)
+print("\nthe multiplication of the four integer:", result,"\n")
