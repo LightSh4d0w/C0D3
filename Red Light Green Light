@@ -1,0 +1,41 @@
+import time
+
+time.sleep(1)
+print("\nSeseorang bertopeng datang kedalam ruangan dengan beberapa pengawal.\n Mereka mengarahakan kami menuju sebuah lapangan luas.")
+time.sleep(1)
+print("\nMereka meminta kami untu berlari ke suatu titik sebelum waktu habis.\nBerapa orang berlari lebih dulu sebelum mereka akhirnya ditembak oleh pengawal karena berlari saat lampu berwarna merah.")
+time.sleep(1)
+print("\nSeprtinya aku harus memperhatikan waktu dan warna lampu sebelum berlari....")
+time.sleep(2)
+print("\nKetik 'lari' untuk berlari dan ketik 'diam' untuk berhenti")
+
+print("\nLAMPU berwarna HIJAU,10 meter dari pintu keluar (lari atau diam)")
+JAWABAN == input ("...")
+if JAWABAN == "lari":
+    print("kamu berhasil berlari sebelum warna lampunya berubah")
+else:
+    print("kamu diam dan menyiakan peluang")
+    time.sleep(1)
+    print ("Kamu tereliminasi")
+
+
+print("\nLAMPU berwarna MERAH,5 meter dari pintu keluar (lari atau diam)")
+JAWABAN == input ("...")
+if JAWABAN == "diam":
+    print("kamu hampir terjatuh saat berhenti,tapi kamu tetap aman")
+else:
+    print("kamu terlalu berambisi untuk lari dan tertembak")
+    time.sleep(1)
+    print ("Kamu tereliminasi")
+
+
+print("\nLAMPU berwarna Hijau,2 meter dari pintu keluar (lari atau diam)")
+JAWABAN == input ("...")
+if JAWABAN == "lari":
+    print("Kamu memanfaatkan peluang terakhirmu \nakhirnya kamu berhasil aman")
+else:
+    print("kamu terlambat. Terkadang terlalu main aman juga ga baik")
+    time.sleep(1)
+    print ("Kamu tereliminasi")
+
+print ("aku mengira ini akhir dari semuanya,\nternyatasemua ini hanya permulaan")
