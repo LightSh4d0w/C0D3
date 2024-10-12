@@ -1,60 +1,128 @@
-import time
-import sys
-
+#Intro of the scenario
 time.sleep(1)
-print("\nSeseorang bertopeng datang kedalam ruangan dengan beberapa pengawal.\nMereka mengarahakan kami menuju sebuah lapangan luas.")
+print("\nA masked man came into the room with several bodyguards. They led us to a large field.")
+time.sleep(3)
+print("\nThey asked us to run to a certain point before time ran out.\nSome people ran first before they were shot by the guards for running when the light was red.")
 time.sleep(4)
-print("\nMereka meminta kami untu berlari ke suatu titik sebelum waktu habis.\nBerapa orang berlari lebih dulu sebelum mereka akhirnya ditembak oleh pengawal karena berlari saat lampu berwarna merah.")
-time.sleep(4)
-print("\nSepertinya aku harus memperhatikan waktu dan warna lampu sebelum berlari....\n\n\n\n\n")
-time.sleep(4)
-print("Ketik 'lari' untuk berlari dan ketik 'diam' untuk berhenti")
+print("\nLooks like I have to pay attention to the time and color of the lights before running....\n\n\n\n\n")
+time.sleep(3)
+print("\n\nTUTORIAL :")
+print("To pick an action, type 'run' to run faster,\ntype 'slow' to walk, and type 'stop' to stop")
+time.sleep(1)
 
-print("\nLAMPU berwarna HIJAU,10 meter dari pintu keluar (lari atau diam)")
+#Start of the game with multiple choices
+print("\nGREEN LIGHTS, 10 meters from the exit (run, slow, or stop)")
 JAWABAN = input ("\n\n...")
-if JAWABAN == "lari":
+if JAWABAN == "run":
     time.sleep(1)
-    print("\nkamu berhasil berlari sebelum warna lampunya berubah\n\n\n\n\n")
+    print("\nYou managed to run before the color of the light changed\n\n\n\n\n")
+    time.sleep(1)
+elif JAWABAN == "slow":
+    time.sleep(1)
+    print("\nDont be a snail-_-")
+    time.sleep(1)
+    print ("\nYou're eliminated")
+    sys.exit()
     time.sleep(1)
 else:
     time.sleep(1)
-    print("\nkamu diam dan menyiakan peluang")
+    print ("\nYou are too resigned to what has just started")
     time.sleep(1)
-    print ("Kamu tereliminasi")
+    print("\nYou're eliminated")
     sys.exit()
     time.sleep(1)
 
-
-print("\n\nLAMPU berwarna MERAH,5 meter dari pintu keluar (lari atau diam)")
+print("\nYELLOW LIGHTS, 7 meters from the exit (run, slow, or stop)")
 JAWABAN1 = input ("\n\n...")
-if JAWABAN1 == "diam":
+if JAWABAN1 == "slow":
     time.sleep(1)
-    print("\nkamu hampir terjatuh saat berhenti,tapi kamu tetap aman\n\n\n\n\n")
+    print("\nYou realize the situation and slow down your movements\n\n\n\n\n")
+    time.sleep(1)
+elif JAWABAN1 == "run":
+    time.sleep(1)
+    print("\nYou should have known the meaning of the yellow light between the green and red lights...")
+    time.sleep(1)
+    print ("\nYou're eliminated")
+    sys.exit()
     time.sleep(1)
 else:
     time.sleep(1)
-    print("\nkamu terlalu berambisi untuk lari dan tertembak")
+    print ("\nYou stop suddenly when running fast,\ncausing injury due to a fall")
     time.sleep(1)
-    print ("Kamu tereliminasi")
+    print("\nYou're eliminated")
     sys.exit()
     time.sleep(1)
 
-print("\n\nLAMPU berwarna HIJAU,2 meter dari pintu keluar (lari atau diam)")
+print("\n\nRED LIGHTS, 5 meters from the exit (run, slow, or stop)")
 JAWABAN2 = input ("\n\n...")
-if JAWABAN2 == "lari":
+if JAWABAN2 == "stop":
     time.sleep(1)
-    print("\nKamu memanfaatkan peluang terakhirmu \nakhirnya kamu berhasil aman..\n\n\n\n\n")
+    print("\nThanks for the slow down your pace before, you can stop well\n\n\n\n\n")
+    time.sleep(1)
+elif JAWABAN2 == "run":
+    time.sleep(1)
+    print("\nSo whats the point of slowing your pace before?!")
+    time.sleep(1)
+    print ("\nYou're eliminated")
+    sys.exit()
     time.sleep(1)
 else:
     time.sleep(1)
-    print("\nkamu terlambat. Terkadang terlalu main aman juga ga baik")
+    print ("\nMaybe something is bothering you,\nwant to chat for a while while watching other players get slaughtered?")
     time.sleep(1)
-    print ("Kamu tereliminasi")
+    print("\nYou're eliminated")
+    sys.exit()
+    time.sleep(1)
+
+print("\nYELLOW LIGHTS, 3 meters from the exit (run, slow, or stop)")
+JAWABAN3 = input ("\n\n...")
+if JAWABAN3 == "slow":
+    time.sleep(1)
+    print("\nSlowly you increasing your pace, watch out for the light to turn red again\n\n\n\n\n")
+    time.sleep(1)
+elif JAWABAN3 == "run":
+    time.sleep(1)
+    print("\nYou are too confident to run before the light suddenly turns red.")
+    time.sleep(1)
+    print ("\nYou're eliminated")
+    sys.exit()
+    time.sleep(1)
+else:
+    time.sleep(1)
+    print ("\nYou just missed the chance")
+    time.sleep(1)
+    print("\nYou're eliminated")
+    sys.exit()
+    time.sleep(1)
+
+print("\n\nGREEN LIGHTS, 2 meters from the exit (run, slow, or stop)")
+JAWABAN4 = input ("\n\n...")
+if JAWABAN4 == "run":
+    time.sleep(1)
+    print("\nYou managed to run before the color of the light changed\n\n\n\n\n")
+    time.sleep(1)
+elif JAWABAN4 == "slow":
+    time.sleep(1)
+    print("\nYou're late, the time is out")
+    time.sleep(1)
+    print ("\nYou're eliminated")
+    sys.exit()
+    time.sleep(1)
+else:
     time.sleep(2)
-    print("\n\n\n\nAku telah gagal, tak peduli sebanyak apapun mencoba. Aku akan selalu menjadi orang yang terjebak\ndidalam labirin tanpa pintu dari game horror ini. Hidup dalam penderitaan, kegelisahan, dan kesepian.\n")
+    print ("You stopped..")
+    time.sleep(2)
+    print("\nYou're just a spectator to others who succeed.\nYou're just watching them celebrate with each other from a distance.")
+    time.sleep(3)
+    print('Like always.')
+    time.sleep(1)
+    print ("\nYou're eliminated")
+    time.sleep(2)
+    print("\n\nI have failed, no matter how hard I try. I will always be the one trapped in the doorless maze of this horror game. Living in misery, anxiety, and loneliness.\n")
     time.sleep(1)
     sys.exit()
     time.sleep(1)
 
-time.sleep(1)
-print ("Aku mengira ini akhir dari semuanya,\nternyatasemua ini hanya permulaan\n\n")
+#Ending
+time.sleep(2)
+print ("\nI thought this was the end of everything,\nbut it's just the beginning\n\n")
