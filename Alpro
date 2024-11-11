@@ -1,0 +1,29 @@
+Var1=['A','B','C']
+Var2=['Ujang','Asep','Badrul','jojo']
+Kemampuan=['si Fokus,','si Kebo,','si Radjin,']
+del Var2[1], Var2[2]
+Var2.append('Murjid')
+print(Var2[0],Kemampuan[0],"mendapatkan nilai",Var1[1])
+print(Var2[1],Kemampuan[1],"mendapatkan nilai",Var1[2])
+print(Var2[3],Kemampuan[2],"mendapatkan nilai",Var1[0])
+print("Mereka adalah",*Kemampuan)
+
+#Penjelasan :
+# Var1[0] 
+# Maksudnya mengambil data indeks atau urutan 0(Pertama)
+
+#Penghapusan Data
+
+#Menghapus dari Indeks
+#Rumus : del (Variabel)[indek ke kebrapa]
+
+#Menghapus dari data
+#Rumus : kelemahan.remove (Variabel)
+
+#Menambahkan Data
+
+#Menambahkan data baru dari urutan akhir urutan atau indeks data
+#Rumus : Variabel.append('Apa yang ingin di tambahkan')
+
+#Menambahkan data ke urutan atau indeks tertentu
+#Rumus : Variabel.insert(indeks berapa, 'data yang ingin di tambahkan')
