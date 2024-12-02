@@ -1,0 +1,90 @@
+#Nomor2UTS
+import time
+
+#Fredbear Family Diner
+
+#Calculating Price and Tax
+
+print ("\ni walk trough the street with the empty stomach.\nHopping tor find a restaurant.")
+
+print ("\nSuddenly i see a bright light in the end of the street.\nI wak towards the light just to find a pizza restaurant")
+
+print ("\nI dont want to miss my chance so iam going for it")
+time.sleep(1)
+
+Price_Burger = (int(input("\nPlease write the food price: ")))
+Quantity_Burger = (int(input("Please write the quantity of food: ")))
+Tax=0.1
+
+Total_Price_with_tax = Price_Burger*Tax
+Price =Total_Price_with_tax+Price_Burger
+Total_Amount_Order = Price*Quantity_Burger
+
+print ("\nCalculating")
+time.sleep(3)
+
+print ("\nThis is the price of your product :",Price_Burger)
+print ("This is the tax of your product :10%")
+print ("This is the quantity of your odered product :",Quantity_Burger)
+print ("This is the total price of your order :",Total_Amount_Order)
+
+time.sleep(2)
+print("\nTime to enjoy the meal")
+
+#NOMOR3uts
+import time
+
+#Intro
+time.sleep(1)
+print ("Welcome to Fredbeqar Family Diner")
+time.sleep(2)
+
+#Menu List
+print ("\nFood\nBurger 10k\nPizza 15k")
+print ("\n\nDrink\nSoda 5k\nWater 2k")
+print ("\n\nFries 5k")
+
+time.sleep(1)
+
+#Ordering
+print ("\nWhat do you want lil guy?")
+time.sleep(1)
+Jawaban = input("\ni want...")
+
+#ordering
+if Jawaban == "Burger" :
+    print("\ni want one burger please")
+    time.sleep(1)
+    print("here you go\n\n")
+elif Jawaban == "Pizza" :
+    print("\nThe Pizza looks delicious")
+    time.sleep(1)
+    print("sure, here you are\n\n")
+elif Jawaban == "Soda" :
+    print("\nI need a soda. Iam so thirsty")
+    time.sleep(1)
+    print("enjoy the fresh\n\n")
+elif Jawaban == "Water" :
+    print("\nI need a pure water")
+    time.sleep(1)
+    print("wise choice\n\n")
+elif Jawaban == "Fries" :
+    print("\nWait your fries is famous. I want one")
+    time.sleep(1)
+    print("Hahaha yeah it is, the best in town\n\n")
+else :
+    time.sleep(1)
+    print ("\nIam sory, i dont speak italian\n\n")
+
+#lOOPING
+TebakAngka = ''
+print ("Congratulations it's your lucky day, choose the number 1-10 to get the door prize between that number")
+
+while TebakAngka != '7':
+    print ("Go on, guess it")
+    TebakAngka = input()
+print ("Congratss")
+
+TebakAngka = 10
+while TebakAngka == 10:
+    print ("Helloooowwwooowooo")
