@@ -1,0 +1,36 @@
+pw = ''
+Kesempatan = 0
+
+print("Masukan pw nya")
+while pw != "AGUS" :
+    pw = input('...')
+    pw = pw.upper()
+    Kesempatan = Kesempatan+1
+    if pw == "AGUS":
+        print ("Huhu haha huha benar huhu haha huha benar")
+    elif Kesempatan == 3:
+        print("LOLOLOLOL")
+        break
+
+
+for b in range (1,11):
+    print (b)
+
+for b in range (10,1,-2):
+    print (f"Ayooo{b}")
+
+for b in range (10,1,2):
+    print (f"Ayooo{b}")
+
+vari = ["l","23","4"]
+for varb in vari :
+    print (varb)
+    print (vari)
+
+for x in range (10,0,-1):
+    print (f"{x} menit")
+    if x==5 :
+        print ("p, woi")
+        continue
+print ("lesgowwww")
+
