@@ -2,6 +2,9 @@ import time
 import sys
 
 def gameplay():
+
+    Penyimpanan=[]
+
     #RUANGAN 1 : KAMAR TIDUR
     def print_kamartidur():
         print("""                               
@@ -28,6 +31,8 @@ def gameplay():
         3. Lemari
         4. Buku harian
         """)
+        Penyimpanan=[]
+        print(Penyimpanan)
 
     def interaksi_pintu():
         print("""\n\n               
@@ -51,6 +56,11 @@ def gameplay():
             time.sleep(2)
             print("\nKunci terbuka dengan bunyi klik pelan. Kamu berhasil keluar dari kamar tidur!")
             time.sleep(2)
+            print("\nKamu berhasil membuka pintu kamar.\nSekarang kamu sampai di sebuah perpustakaan")
+            time.sleep(2)
+            print("\nPerpustakaan ini terlihat kumuh.\nBanyak buku buku berserakan dan robek.")
+            time.sleep(2)
+            print("\nKamu tetap tidak mempedulikan itu dan tetap mencari jalan keluar.")
             return True
         else:
             print("\n\nMemasukan Kode")
@@ -85,21 +95,21 @@ def gameplay():
 
     def interaksi_bukuharian():
         print("""\n\n                                                     
-      __________________   _________________         
-  .-/|                  \ /                  |\-.    
-  ||||  ****             |             ****  ||||    
-  |||| *    *            |            *    * ||||    
-  |||| *    *            |  ****      *    * ||||    
-  ||||  *****            | *    *     *    * ||||    
-  ||||      *    ****    | *    *      ****  ||||    
-  |||| *    *   *    *   |  *****            ||||    
-  ||||  ****    *    *   |      *            ||||    
-  ||||          *    *   | *    *            ||||    
-  ||||           ****    |  ****             ||||    
-  ||||                   |                   ||||    
-  ||||__________________ | __________________||||    
-  ||/===================\|/===================\||    
-  `--------------------~___~-------------------''    
+            __________________   _________________         
+        .-/|                  \ /                  |\-.    
+        ||||  ****             |             ****  ||||    
+        |||| *    *            |            *    * ||||    
+        |||| *    *            |  ****      *    * ||||    
+        ||||  *****            | *    *     *    * ||||    
+        ||||      *    ****    | *    *      ****  ||||    
+        |||| *    *   *    *   |  *****            ||||    
+        ||||  ****    *    *   |      *            ||||    
+        ||||          *    *   | *    *            ||||    
+        ||||           ****    |  ****             ||||    
+        ||||                   |                   ||||    
+        ||||__________________ | __________________||||    
+        ||/===================\|/===================\||    
+        `--------------------~___~-------------------''    
                                                      """)
         
         print("\nKamu membuka buku harian yang tergeletak di atas meja.")
@@ -114,7 +124,7 @@ def gameplay():
     unlocked = False
     while not unlocked:
         print_kamartidur()
-        Pilihan = input("Apa yang ingin Anda periksa? (1: Pintu, 2: Foto, 3: Lemari, 4: Buku): ")
+        Pilihan = input("Apa yang ingin Anda periksa? (1: Pintu, 2: Foto, 3: Lemari, 4: Buku):\n")
 
         if Pilihan == "1":
             unlocked = interaksi_pintu()
@@ -125,14 +135,263 @@ def gameplay():
         elif Pilihan == "4":
             interaksi_bukuharian()
         else:
-            print("\nPilihan tidak valid. Silakan pilih 1, 2, 3, atau 4.")
+            print("\nPilihan tidak valid. Silakan pilih angka yang tertera.")
     
-
-
-
-
-
+    #RUANG 2 : PERPUSTAKAAN
+    def print_perpustakaan():
+        print("""                                                                   
+        ┌────────────────────────────────┐ 
+        │=============================== │ 
+        │                                │ 
+        │ ===========  ===========       │ 
+        │ │---------│  │---------│       │ 
+        │ │ []  ]] [│  │ []  ]] [│       │ 
+        │ │---------│  │---------│ ======│ 
+        │ │[[| [[  ]│  │[[| [[  ]│ │┌──┐││ 
+        │ │---------│  │---------│ │└──┘#│ 
+        │ │[[ [[[  ]│  │[[ [[[  ]│ │┌──┐#│ 
+        │ │---------│  │---------│ │└──┘││ 
+        ================================== """)
+        print("""
+        ================================
+                  PERPUSTAKAAN
+        ================================
+        Interaksi:
+        1. Pintu
+        2. Rak Buku
+        3. Peti Kayu
+        4. Poster
+        5. Vas Bunga
+        6. Pintu Bawah Tanah
+        """)
+        Penyimpanan=[]
+        print(Penyimpanan)
     
+    def interaksi_pintuperpus():
+        print("""                
+        ┌───────────┐ 
+        │┌─────┐┌──┐│ 
+        ││     ││  ││ 
+        ││     ││  ││ 
+        ││     ││  ││ 
+        ││     │└──┘│ 
+        ││     │ #@#│ 
+        ││     │┌──┐│ 
+        ││     ││  ││ 
+        ││     ││  ││ 
+        │└─────┘└──┘│ 
+        └───────────┘ """)
+        print("\nMelihat ada pintu lainnya, kamu bergegas untuk membukanya.")
+        time.sleep(2)
+        print("Pintunya terkunci dari sisi lain.\nPasti ada sesuatu yang menahannya.")
+        time.sleep(2)
+    
+    def interaksi_rakbuku():
+        print("""                                   
+        ===================================
+               .--.                       
+               │--│      .---.  .---.     
+           .---│  │--.   │===│  |   |     
+        .--|===│  │==│   │   │__|   |--.  
+        |  |   │66│  │   │   │  |   |--|  
+        |  |   │  │86│   │9 6│  |   |  |  
+        |  |   │  │  │   │   │  |   |__|  
+        |  |===│--│==│   │===│  |~~~|--|  
+        ^--^---'--^--^   ^---^--^---'--^  
+        ===================================""")
+        print("\nBuku ini tersusun dalam 66,86,...,dan 96.")
+        time.sleep(2)
+        print("\nTerdapat susunan buku yang hilang.")
+        time.sleep(2)
+        print("\nKamu penasaran berarti apa susunan buku itu.")
+        time.sleep(2)
+    
+    def interakasi_peti():
+        print("""                                    
+           ____________________________    
+          /──────────┬──────┬──────────\   
+         //──────────│┌────┐│──────────\\  
+        /────────────┘│┌──┐│└────────────\ 
+        │ ┌───────────││##││───────────┐ │ 
+        │ │~~~~~~~~~~~│└──┘│~~~~~~~~~~~│ │ 
+        │ ├───────────┴────┴───────────┤ │ 
+        │ │~~~~~~~~~~~~~~~~~~~~~~~~~~~~│ │ 
+        │ ├────────────────────────────┤ │ 
+        │ │~~~~~~~~~~~~~~~~~~~~~~~~~~~~│ │ 
+        │ └────────────────────────────┘ │ 
+        ================================== 
+                                    """)
+        print("\nSebuah peti tua yang berdebu")
+        time.sleep(2)
+        print("\nPeti itu terkunci dengan rapat.")
+        time.sleep(2)
+        print("\nPasti ada cara untuk membukanya")
+        time.sleep(2)
+        Jawaban=input("Buka peti?Buka/Tidak...")
+        if Jawaban == "Buka":
+            if "Kunci" in Penyimpanan :
+                print("\nMembuka..")
+                time.sleep(3)
+                print("""                                    
+        ┌────────────────────────────────┐ 
+        │                                │ 
+        │          _____ ____            │ 
+        │         |___  |___ \           │ 
+        │            / /  __) |          │ 
+        │           / /  / __/           │ 
+        │          /_/  |_____|          │ 
+        │                                │ 
+        │                                │ 
+        │                                │ 
+        └────────────────────────────────┘ """)
+                print("\nKamu mendapatkan kertas bertuliskan ANGKA 72\n")
+                time.sleep(2)
+            else :
+                print ("\nMembuka...")
+                time.sleep(2)
+                print ("\nKamu perlu sesuatu untuk membuka ini.\n")
+                time.sleep(2)
+        elif Jawaban == "Tidak":
+            print_perpustakaan()
+        else:
+            print_perpustakaan()
+    
+    def interaksi_vasbunga():
+        print("""
+              ⣠⣦⡤⣤⣄⡀⢀⣤⣤⣄⡀⠀⠀⠀⠀⢀⣠⣤⢤⡦⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⢀⣤⡴⠞⠋⠉⠳⠄⠀⣹⡌⠀⠰⠏⠛⠶⣄⣤⠞⠋⢁⡀⣸⠃⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢻⡟⠉⠁⠐⣦⡤⡀⢀⡼⢧⠀⠀⣀⠀⠀⠈⣷⢤⣶⠋⢨⡿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⡟⢂⣠⣀⡙⢿⣿⣟⣆⣸⣤⣏⡀⡀⠒⢻⣿⢋⣉⡿⠟⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣀⡼⠛⠛⠛⠛⣛⣻⣿⣿⢿⣿⣟⣟⠛⠛⠿⢿⡿⣍⠛⢦⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣿⠃⠀⠀⠀⢠⠼⣿⣿⣧⣼⣿⣿⡿⢿⡀⠀⠀⢻⡿⢇⠀⢿⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠿⣟⠃⠀⠀⠀⠀⣞⠘⣿⣿⣟⣗⣿⠀⢁⣀⠀⡾⠻⣆⡡⢸⣷⠀⠀⠀⠀⠀⠀
+⠀⣠⣴⠶⢶⣦⣿⣦⣤⡄⠀⠀⣼⠟⢹⣻⡏⠉⠈⣧⠀⢈⣿⠿⢤⢨⣟⣿⠟⠀⠀⠀⠀⠀⠀
+⠈⠛⠳⢦⣌⣉⣫⣽⣿⢲⣤⡼⣏⠀⠀⢉⡃⢀⡴⠋⠙⠋⠁⣠⠴⠿⣿⠉⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠈⠀⢸⡇⠸⣿⡃⢸⡟⢿⡖⠟⢋⣵⡖⠀⢀⡼⠃⠀⠀⢸⠇⠀⠀⣰⣿⠂⠀⠀
+⠀⠀⠀⠀⣀⡀⠀⠘⣧⠸⠁⢡⣾⠧⠸⣧⠀⣼⠁⣷⠀⢸⣿⡄⢠⣴⠟⠀⣠⠞⣡⡿⠀⠀⠀
+⢸⣿⡿⠋⠉⠉⢷⣦⠘⣦⣴⠛⠁⠀⡄⢹⣦⡏⢠⡏⠀⢬⣽⠛⠛⠁⢠⡞⠁⣼⣷⠇⠀⠀⠀
+⠀⠉⠻⣆⡀⠀⠀⣹⣷⢸⠏⠀⠀⢸⠿⡆⢻⣿⠏⠀⠀⣼⣃⠀⠀⢠⡟⢀⣿⣹⠏⠀⠀⠀⠀
+⠀⠀⠀⠈⠙⠲⠟⠛⠋⠳⢦⡀⠀⢸⠀⢹⡜⢻⡄⠀⢲⣯⣿⡄⠀⣾⣱⣾⡿⠉⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠠⣤⣀⠀⠙⢦⣼⡆⢈⡇⠸⢿⡄⢸⢿⠀⢷⡰⣿⣿⣋⡴⠶⠛⠛⠛⢳⡦
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⢻⡙⠳⣄⠿⣷⣿⠇⠀⠈⣷⢾⢸⡄⠈⣷⣿⡿⢏⣀⣀⣀⣠⡼⠋⠀
+⠀⠀⠀⠀⣤⣤⣤⣤⣀⣀⠛⣦⠻⣝⢿⣿⠀⠀⠀⠺⣿⡎⣧⠀⣿⡿⠋⠉⠉⣉⣉⣁⣤⣄⠀
+⠀⠀⠀⠀⠉⠳⣄⠐⢦⣍⣟⠮⣟⠮⣟⣿⣆⡀⠀⠀⣻⡇⢹⣽⣿⠃⣠⡞⠉⠀⠀⢸⣿⠏⠀
+⠀⠀⠀⠀⠀⠀⠙⣧⠐⠮⣿⣷⣜⢳⣄⠽⢿⡁⠀⠀⠸⡇⠈⣿⣿⢔⣿⣆⣀⣠⣤⡿⠃⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠛⢾⣶⣶⣿⣿⣿⢦⣟⡇⠀⠀⢐⡿⠀⢸⣿⠏⠀⠉⠉⠉⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⡟⢦⡀⠹⡇⠀⠀⢸⠃⢃⣾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⢹⠀⡇⠀⢰⡟⢠⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣷⠀⢸⣇⡇⢀⣿⡷⣫⣤⠴⠖⠓⣿⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣟⣼⣿⣃⣾⣿⢞⡯⠀⠀⣠⡾⠃⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣾⢿⣿⣩⡤⠴⠞⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⢛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠺⠿⠚⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""")
+        print("\nKamu memeriksa vas bunga dengan hati-hati...\n")
+        time.sleep(2)
+        if "Kunci" not in Penyimpanan:
+            print("""                                  
+        ┌────────────────────────────────┐
+        │                                │
+        │                                │
+        │        .--.                    │
+        │       /.-. '----------.        │
+        │       \'-' .--"--""-"-'        │
+        │        '--'                    │
+        │                                │
+        │                                │
+        │                                │
+        └────────────────────────────────┘""")
+            print("\nKamu menemukan sebuah kunci di dalam vas bunga!\n")
+            Penyimpanan.append("Kunci")
+            time.sleep(2)
+        else:
+            print("\nTidak ada lagi yang bisa ditemukan di sini.\n")
+            time.sleep(2)
+
+    def interaksi_poster():
+        print ("""
+        ┌────────────────────┐ 
+        │ ┌────────────────┐ │ 
+        │ │ ### ## ### ### │ │ 
+        │ │ o o o ┌──────┐ │ │ 
+        │ │ oooooo│      │ │ │ 
+        │ │  oo oo│      │ │ │ 
+        │ │ oooo  │      │ │ │ 
+        │ │ oo ooo└──────┘ │ │ 
+        │ │  ooo  oooooo o │ │ 
+        │ │ oo ooo     o o │ │ 
+        │ │  ooo oooo oooo │ │ 
+        │ │ ┌─────┐   oooo │ │ 
+        │ │ └─────┘ oooo o │ │ 
+        │ └────────────────┘ │ 
+        └────────────────────┘ """)
+        print("\nIni hanyalah poster biasa.")
+        time.sleep(2)
+        print("\nPoster ini berjudul SEMUA DIMULAI DARI HAL KECIL.")
+        time.sleep(2)
+        print("\nTidak ada yang spesial.\n")
+
+
+    def interaksi_pintubawahtanah():
+        print("""        
+              _______________      
+             /       =       \     
+            / ────── = ────── \    
+           / /#####│ = │#####\ \   
+          / /######│ = │######\ \  
+         / /──────── = ────────\ \ 
+        /____________=____________\
+                             """)
+        print("\nKamu melihat ada sebuah pintu bawah tanah")
+        time.sleep(2)
+        print("\nPintu itu membutuhkan kombinasi angka untuk terbuka")
+        time.sleep(2)
+        Jawaban=input("Buka Pintu Bawah Tanah?Buka/Tidak...")
+        if Jawaban == 'Buka':
+            PW = input ("\nMasukan Kombinasi Password")
+            if PW == '3679':
+                print ("Memasukan Password..")
+                time.sleep(2)
+                print ("Pintu bawah tanahnya terbuka!")
+                time.sleep(2)
+                return True
+            else :
+                print ("Memasukan Password..")
+                time.sleep(2)
+                print ("Pintu masih belum terbuka")
+                time.sleep(2)
+                return False
+        elif Jawaban == 'Tidak':
+            print("Aku perlu kodenya terlebih dahulu")
+        else :
+            print("Aku perlu kodenya terlebih dahulu")
+            
+
+        
+    unlocked2 = False
+    while not unlocked2:
+        print_perpustakaan()
+        Pilihan = input("Apa yang ingin Kamu periksa? (1: Pintu, 2: Rak Buku, 3: Peti Kayu, 4: Poster, 5: Vas Bunga, 6: Pintu Bawah Tanah):\n")
+        if Pilihan == '1':
+            time.sleep(2)
+            interaksi_pintuperpus()
+        elif Pilihan == '2':
+            time.sleep(2)
+            interaksi_rakbuku()
+        elif Pilihan == '3':
+            time.sleep(2)
+            interakasi_peti()
+        elif Pilihan == '4':
+            time.sleep(2)
+            interaksi_poster()
+        elif Pilihan == '5':
+            time.sleep(2)
+            interaksi_vasbunga()
+        elif Pilihan == '6':
+            time.sleep(2)
+            interaksi_pintubawahtanah()
+        else:
+            print("\nPilihan tidak valid. Silakan pilih angka yang tertera.")
+
 
 
 def introgame():
@@ -169,7 +428,9 @@ def Mansion():
 
 
 def Main_menu():
-    print ("""                                                                                                                                               
+    Pilihan_Main_menu = None
+    while Pilihan_Main_menu != 'Play' and Pilihan_Main_menu != 'Exit':
+        print ("""                                                                                                                                               
     ┌───────────────────────────────────────────────────────────────────────┐      
     │                                                                       │      
     │                                                                       │      
@@ -181,9 +442,9 @@ def Main_menu():
     │                                                      |_|              │      
     │                                                               _   __  │      
     │                                                              / \ /##\ │      
-    │                             Play The Game                    |#|/#__#\│      
+    │                           > Play The Game                    |#|/#__#\│      
     │                                                              |/ │/  \││      
-    │           /\                Exit The Game                    /│#/#  #\│      
+    │           /\              > Exit The Game                    /│#/#  #\│      
     │          /**\                                              __|│_│_┌┐_││      
     │         /****\   /\                                    ___/    _______│      
     │        /      \ /**\                                  /  /    /       │      
@@ -196,13 +457,14 @@ def Main_menu():
                                                                                    
                                                                                    
     Maukah kamu bermain? Play/Exit""")
-    Pilihan_Main_menu=input("_")
-    if Pilihan_Main_menu == 'Play':
-        introgame()
-    elif Pilihan_Main_menu == 'Exit':
-        sys.exit(1)
-    else :
-        print ("Coba input lagi")
+        Pilihan_Main_menu=input("\n...")
+        if Pilihan_Main_menu == 'Play':
+            introgame()
+        elif Pilihan_Main_menu == 'Exit':
+            sys.exit(1)
+        else :
+            print ("\nCoba lagi")
+
 
 
 
@@ -210,5 +472,4 @@ def Main_menu():
 #Urutan Game
 Main_menu()
 gameplay()
-
 
