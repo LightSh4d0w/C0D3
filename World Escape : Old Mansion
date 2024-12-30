@@ -54,7 +54,7 @@ def gameplay():
         time.sleep(1)
         password = input("Ketik password angka: ")
         if password == "0606": #Password untuk membuka pintu
-            print("\nMemasukan Password")
+            print("\nMemasukan Password...")
             time.sleep(2)
             print("""                                            
         ┌────────────────────────────────────────┐ 
@@ -93,7 +93,7 @@ def gameplay():
             print("\n\nMemasukan Kode")
             time.sleep(2)
             print("\nGembok tidak bereaksi. Pintu tetap terkunci.")
-            time.sleep(2)
+            time.sleep(3)
             return False #Jika salah, loop akan berlanjut
 
     def interaksi_foto():
@@ -123,8 +123,8 @@ def gameplay():
         └───────────────────────────┘ """"")
         print("\nKamu memandangi foto potret seseorang yang sudah lusuh.")
         time.sleep(2)
-        print("Potret ini memancing kenangan samar yang tak ingin diingat. Tidak ada yang membantu di sini.")
-        time.sleep(2)
+        print("\nPotret ini memancing kenangan samar yang tak ingin diingat.\n\nTidak ada yang membantu di sini.")
+        time.sleep(3)
 
     def interaksi_lemari1():
         print("""\n\n                    
@@ -141,8 +141,8 @@ def gameplay():
         └───────────────┘""")
         print("\nKamu mencoba membuka lemari kayu besar.")
         time.sleep(2)
-        print("Engsel lemari terlalu kuat, sepertinya tidak mungkin dibuka dengan tangan kosong.")
-        time.sleep(2)
+        print("\nEngsel lemari terlalu kuat, sepertinya tidak mungkin dibuka dengan tangan kosong.")
+        time.sleep(3)
 
     def interaksi_bukuharian():
         print("""\n\n                                                     
@@ -167,10 +167,10 @@ def gameplay():
         time.sleep(2)
         print("\nKamu membuka beberapa halaman, beberapa diantaranya hanya berisi sobekan kertas.")
         time.sleep(2)
-        print("\"Kamu menemukan halaman bertuliskan 9090.\"\"")
+        print("\nKamu menemukan halaman bertuliskan 9090.")
         time.sleep(2)
-        print("Kamu tidak bisa membedakan MANA BAGIAN ATAS DAN BAWAH dari buku ini")
-        time.sleep(2)
+        print("\nKamu tidak bisa membedakan MANA BAGIAN ATAS DAN BAWAH dari buku ini")
+        time.sleep(3)
 
     #Alur Permainan di Ruangan 1
     unlocked = False #Nilai awal variabel unlocked
@@ -188,6 +188,7 @@ def gameplay():
             interaksi_bukuharian()
         else:
             print("\nPilihan tidak valid. Silakan pilih angka yang tertera.")
+            time.sleep(2)
     
     #RUANGAN 2 : PERPUSTAKAAN
     def print_perpustakaan():
@@ -234,8 +235,8 @@ def gameplay():
         └───────────┘ """)
         print("\nMelihat ada pintu lainnya, kamu bergegas untuk membukanya.")
         time.sleep(2)
-        print("Pintunya terkunci dari sisi lain.\nPasti ada sesuatu yang menahannya.")
-        time.sleep(2)
+        print("\nPintunya terkunci dari sisi lain. Pasti ada sesuatu yang menahannya.")
+        time.sleep(3)
     
     def interaksi_rakbuku():
         print("""                                   
@@ -255,7 +256,7 @@ def gameplay():
         print("\nTerdapat susunan buku yang hilang.")
         time.sleep(2)
         print("\nKamu penasaran berarti apa susunan buku itu.")
-        time.sleep(2)
+        time.sleep(3)
     
     def interakasi_peti():
         print("""                                    
@@ -278,7 +279,7 @@ def gameplay():
         time.sleep(2)
         print("\nPasti ada cara untuk membukanya")
         time.sleep(2)
-        Jawaban=input("Buka peti?Buka/Tidak...")
+        Jawaban=input("\nBuka peti?Buka/Tidak...")
         if Jawaban == "Buka":
             if "Kunci" in Penyimpanan : #Jika pemain memiliki kunci dalam penyimpanan, maka program berjalan
                 print("\nMembuka..")
@@ -296,14 +297,15 @@ def gameplay():
         │                                │ 
         └────────────────────────────────┘""")
                 print("\nKamu mendapatkan kertas bertuliskan ANGKA 36\n")
-                time.sleep(2)
+                time.sleep(3)
             else :
                 print ("\nMembuka...")
                 time.sleep(2)
                 print ("\nKamu perlu sesuatu untuk membuka ini.\n")
-                time.sleep(2)
+                time.sleep(3)
         else:
             print("\nPeti itu terkunci dengan rapat.")
+            time.sleep(3)
     
     def interaksi_vasbunga():
         print("""
@@ -351,10 +353,10 @@ def gameplay():
         └────────────────────────────────┘""")
             print("\nKamu menemukan sebuah kunci di dalam vas bunga!\n")
             Penyimpanan.append("Kunci")
-            time.sleep(2)
+            time.sleep(3)
         else:
             print("\nTidak ada lagi yang bisa ditemukan di sini.\n")
-            time.sleep(2)
+            time.sleep(3)
 
     def interaksi_poster():
         print ("""
@@ -378,6 +380,7 @@ def gameplay():
         print("\nPoster ini berjudul SEMUA DIMULAI DARI HAL KECIL.")
         time.sleep(2)
         print("\nTidak ada yang spesial.\n")
+        time.sleep(3)
 
 
     def interaksi_pintubawahtanah():
@@ -426,16 +429,18 @@ def gameplay():
                 time.sleep(2)
                 print("\nKamu menuruni tangga dan masuk kedalam.")
                 time.sleep(2)
-                print("Kamu menemukan sebuah ruang bawah tanah yang penuh dengan debu.")
+                print("\nKamu menemukan sebuah ruang bawah tanah yang penuh dengan debu.")
+                time.sleep(3)
                 return True #Jika benar, Maka variabel unlocked2 akan bernilai true. loop ruangan 2 berakhir
             else :
                 print ("\nMemasukan Password..")
                 time.sleep(2)
                 print ("\nPintu masih belum terbuka")
-                time.sleep(2)
+                time.sleep(3)
                 return False
         else :
             print("\nAku perlu kodenya terlebih dahulu")
+            time.sleep(3)
             
 
     #Alur Permainan di Ruangan 2
@@ -463,6 +468,7 @@ def gameplay():
             unlocked2 = interaksi_pintubawahtanah() #Cara merubah nilai variabel dengan menjalani fungsi ini
         else:
             print("\nPilihan tidak valid. Silakan pilih angka yang tertera.")
+            time.sleep(2)
     
     #Ruangan 3 : Ruang Bawah Tanah
     def print_basement():
@@ -559,16 +565,18 @@ def gameplay():
         │ ######## #     #  ####               ###  #    #   #### │ 
         └─────────────────────────────────────────────────────────┘ """)
             print("Pintu Terbuka!!!")
+            time.sleep(2)
             return True #Jika benar, variabel unlocked3 akan bernilai true dan loop berakhir
-            time.sleep(2)
+
         elif "Keping 1" in Penyimpanan or "Keping 2" in Penyimpanan:
-            print("\nDibutuhkan pasangan kepingan untuk membuka.")
+            print("\nDibutuhkan pasangan kepingan kunci untuk membuka.")
+            time.sleep(3)
             return False #Jika salah, loop akan berlanjut
-            time.sleep(2)
+
         else:
-            print("\nDibutuhkan pasangan kepingan untuk membuka.")
+            print("\nDibutuhkan pasangan kepingan kunci untuk membuka.")
+            time.sleep(3)
             return False #Jika salah, loop akan berlanjut
-            time.sleep(2)
 
     def interaksi_berangkas():
         print("""     
@@ -602,9 +610,9 @@ def gameplay():
         time.sleep(2)
         Jawaban = input("\nBuka Berangkas?Buka/Tidak\n...")
         if Jawaban == "Buka":
-            PW = input("\nMasukan Huruf:")
+            PW = input("\nMasukan Kombinasi Huruf: ")
             if PW == 'HOPE':
-                print("\nMemasukan Huruf...")
+                print("\nMemasukan huruf...")
                 time.sleep(3)
                 if "Keping 1" not in Penyimpanan:
                     print("""       
@@ -626,6 +634,14 @@ def gameplay():
                 else:
                     print("\nTidak ada lagi yang bisa ditemukan di sini.\n")
                     time.sleep(2)
+            else :
+                print("\nMemasukan huruf...")
+                time.sleep(3)
+                print("\nBerangkas Masih Tertutup Rapat")
+                time.sleep(3)
+        else :
+            print("\nBerangkas Masih Tertutup Rapat")
+            time.sleep(3)
 
     def interaksi_lemari2():
         print("""
@@ -668,7 +684,7 @@ def gameplay():
         └──────────────────────┘""")
             print("\nKamu menemukan sarung tangan di dalam lemari!\n")
             Penyimpanan.append("Sarung Tangan") #Menambahkan sarung tangan ke penyimpanan pemain
-            time.sleep(2)
+            time.sleep(3)
         else:
             print("\nTidak ada lagi yang bisa ditemukan di sini.\n")
             time.sleep(2)
@@ -736,16 +752,17 @@ def gameplay():
         *                              │  
         └──────────────────────────────┘  """)
                 print("Dibaliknya terdapat 2 huruf yaitu LV")
-                time.sleep(2)
+                time.sleep(3)
             elif "Sarung Tangan" not in Penyimpanan: #Jika pemain tidak memiliki sarung tangan, kode tidak berjalan
                 print("\nKamu Mencoba mengambil...")
                 time.sleep(3)
                 print("\nSangat sulit mengambilnya tanpa membuat tanganmu kotor")
                 time.sleep(2)
                 print("\nKamu butuh sesuatu.")
+                time.sleep(3)
         else:
             print("\nTempat sampah itu sangat bau.")
-            time.sleep(2)
+            time.sleep(3)
 
     def interaksi_sobekanfoto():
         print("\nSebuah foto tua yang kehilangan setengah bagiannya")
@@ -806,14 +823,15 @@ def gameplay():
               └──────┘       """)
                 print("\nKamu mendapat keping kunci ke 2!")
                 Penyimpanan.append("Keping 2") #Keping 2 akan ditambahkan ke penyimpanan pemain
-                time.sleep(2)
+                time.sleep(3)
             else:
                 print("\nMemasukan Kode...")
                 time.sleep(2)
                 print("\nKopernya tetap terkunci")
+                time.sleep(3)
         else :
             print("\nKopernya tetap terkunci")
-            time.sleep(2)
+            time.sleep(3)
                 
     def interaksi_bukuberdebu():
         print("\nTerdapat sesuatu yang mengunci buku tua itu. Bukunya tidak bisa dibuka.")
@@ -831,7 +849,7 @@ def gameplay():
               \(   _.-"      
                `--"          """)
         print("\nSampul buku tersebut bergambar angka 9")
-        time.sleep(2)
+        time.sleep(3)
     
     def interaksi_jamdinding():
         print("""                       
@@ -850,7 +868,7 @@ def gameplay():
         print("\nKamu keheranan melihat ada jam dinding di basement")
         time.sleep(2)
         print("\nSepertinya jam itu sudah rusak.")
-        time.sleep(2)
+        time.sleep(3)
     
     def interaksi_lilin():
         print("""            
@@ -864,7 +882,7 @@ def gameplay():
          ___││___  
         /________\ """)
         print("\nRuangan ini akan gelap jika bukan karena susunan 3 lilin itu")
-        time.sleep(2)
+        time.sleep(3)
     
     def interaksi_secarikkertas():
         print("""                                                                         
@@ -887,6 +905,7 @@ def gameplay():
                                                                          """)
         time.sleep(2)
         print("Kamu penasaran apa maksud dari huruf besarnya.")
+        time.sleep(3)
 
     #Alur Permainan di Ruangan 3
     unlocked3 = False #Nilai awal variabel unlocked3
@@ -925,6 +944,7 @@ def gameplay():
             interaksi_secarikkertas()
         else:
             print("\nPilihan tidak valid. Silakan pilih angka yang tertera.")
+            time.sleep(2)
     
 def introgame(): #Intro dari game nya
     time.sleep(2)
@@ -939,118 +959,136 @@ def ending(): #Program terakhir setelah gameplay dijalankan
     time.sleep(2)
     print("\nAkhirnya kamu dapat melihat suasana selain yang ada di bagnunan ini.")
     time.sleep(2)
-    print("\nTernyata suasana diluar tidak seindah saat kamu berada didalam.")
-    time.sleep(2)
+    print("\nTapi..")
+    time.sleep(5)
+    print("\nTernyata suasana diluar tidak seindah yang kamu bayangkan.")
+    time.sleep(4)
+    print("\nSusana didalam jauh lebih indah dan aman.")
+    time.sleep(3)
     print("\nMeskipun sendirian, setidaknya semua yang kamu butuhkan ada didalam bangunan ini.")
     time.sleep(4)
     print("\nHaruskah kamu pergi?")
-    Jawaban = input("Pergi/Kembali Masuk\n\n...") #Terdapat 2 ending yang dimiliki program ini
-    if Jawaban == 'Pergi':
-        print("\nKamu memutuskan untuk pergi dari sini.")
-        time.sleep(2)
-        print("\nMeninggalkan Mansion besar tanpa penghuni ini.")
-        time.sleep(2)
-        print("\nSebelum kamu bisa menginjakan kaki di rumput...")
-        time.sleep(1)
-        print("\nTiba-tiba...\n")
-        time.sleep(4)
-        print("""                                                            
-        ┌─────────────────────────────────────────────────────────┐ 
-        │                                                         │ 
-        │                                                         │ 
-        │                                                         │ 
-        │                        ........ .                       │ 
-        │                   ...................                   │ 
-        │                ....   ⢀⣀⣤⣤⣤⣤⣴⣤⣤⣄⡀  ....             │ 
-        │              ....   ⣴⣾⠿⠛⠋⠉⠁⠀⠀⠀⠈⠙⠻⢷⣦⡀ ...           │ 
-        │               .  ⣤⣾⡿⠋⠁⠀⣠⣶⣿⡿⢿⣷⣦⡀⠀⠀⠀⠙⠿⣦⣀  ..       | 
-        │             .  ⣴⣿⡿⠋⠀⠀⢀⣼⣿⣿⡄⣶⣿⣾⣽⣿⡆⠀⠀⠀⠀⢻⣿⣷⣶⣄⠀     │ 
-        │             ⠀⣴⣿⣿⠋⠀⠀⠀⠀⠸⣿⣿⣿⣿⣯⣿⣿⣿⣿⣿⠀⠀⠀⠐⡄⡌⢻⣿⣿⡷    │ 
-        │             ⢸⣿⣿⠃⢂⡋⠄⠀⠀⠀⢿⣿⣿⣿⣿⣿⣯⣿⣿⠏⠀⠀⠀⠀⢦⣷⣿⠿⠛⠁    │ 
-        │             ⠀⠙⠿⢾⣤⡈⠙⠂⢤⢀⠀⠙⠿⢿⣿⣿⡿⠟⠁⠀⣀⣀⣤⣶⠟⠋⠁⠀⠀⠀    │ 
-        │             ⠀⠀⠀⠀⠈⠙⠿⣾⣠⣆⣅⣀⣠⣄⣤⣴⣶⣾⣽⢿⠿⠟⠋⠀⠀⠀⠀⠀⠀⠀     │ 
-        │             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠛⠙⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀       │ 
-        │                                                         │ 
-        │                                                         │ 
-        │                                                         │ 
-        │                                                         │ 
-        │                                                         │ 
-        └─────────────────────────────────────────────────────────┘""")
-        print("\nMatamu terbuka dengan sekejap!")
-        time.sleep(2)
-        print("\nKamu seolah-olah berpindah tempat ke sebuah ruangan yang familiar")
-        time.sleep(2)
-        print("\nKamu terbangun di sebuah tempat tidur yang empuk.")
-        time.sleep(2)
-        print("\nSetelah mengumpulkan kesadaran, kamu mengingat apa yang terjadi.")
-        time.sleep(2)
-        print("\nTanpa menunggu lebih lama, kamu melakukan apa yang harus kamu lakukan...")
-        time.sleep(3)
-        print("""                                                           
-        ┌─────────────────────────────────────────────────────────┐
-        │                         │    │    │       ....          │
-        │================         │====│====│      ......         │
-        │================         │    │    │  ...  .....         │
-        ├───────────┐  │          └─────────┘   ...   ..          │
-        │ PILL      │  │                          .......        D│
-        │___        │  │           ..               ......      │ │
-        │   "-.     │  │           .................... ..      │ │
-        │      \    │  │           ..................   ...     │ │
-        │       |   │  │      │====================================
-        │ .-.  ,|   │  │      ====================================│
-        │ \__)( |   │  │_______0_______________________________0__│
-        │\     \|   │  │       0                               0  │
-        │^     _)   │  │____________________________              │
-        │III|__/    │  │                            \             │
-        │III/ |     │  │                             \            │
-        │     /     │  │                              \           │
-        │----`──────┘  │                               \          │
-        │                                               \         │
-        ├──────────────┘                                 \        │
-        └─────────────────────────────────────────────────────────┘""")
-        time.sleep(3)
-        print("""                                                           
-        ┌─────────────────────────────────────────────────────────┐
-        │......................                                   │
-        │..........................                               │
-        │............................     ........                │
-        │  ..........................................             │
-        │          ....................................           │
-        │                ...............................          │
-        │                              ........      ...          │
-        │                                 ....         ..         │
-        │                                   ...                   │
-        │                                                         │
-        │                                       ________          │
-        │                                       ┌──────┐          │
-        │           Good Bye.                 # │┌────┐│ ##       │
-        │                                  # # #││    ││#  # #    │
-        │                                 ----------------------  │
-        │                                 ======================  │
-        │                                  │##  ##  ##  ##  ##│   │
-        │                                   │##  ## ## ##  ##│    │
-        │                                   │################│    │
-        └─────────────────────────────────────────────────────────┘""")
-        time.sleep(3)
-        print("\n\n\nTHANKS FOR PLAYING\n\n\n")
-        time.sleep(2)
-        print("Games by Group 12\n\n")
-    elif Jawaban == 'Kembali Masuk':
-        time.sleep(2)
-        print("\nKamu merasa dunia luar tak seindah di dalam.")
-        time.sleep(2)
-        Mansion()
-        print("\nKamu selamanya akan tinggal di mansion ini")
-        time.sleep(2)
-        print("\nMeskipun kamu sendirian, tapi kamu aman di dalam")
-        time.sleep(3)
-        print("\n\n\nTHANKS FOR PLAYING\n\n\n")
-        time.sleep(2)
-        print("Games by Group 12\n\n")
+    JawabanENd = None
+    while JawabanENd != 'Pergi' and JawabanENd != 'Kembali Masuk':
+        JawabanEnd = input("\nPergi/Kembali Masuk\n\n...\n") #Terdapat 2 ending yang dimiliki program ini
+        if JawabanEnd == 'Pergi':
+            print("\nKamu tetap memutuskan untuk pergi dari sini.")
+            time.sleep(2)
+            print("\nMeninggalkan Mansion besar tanpa penghuni ini.")
+            time.sleep(2)
+            print("\nSebelum kamu bisa menginjakan kaki di rumput...")
+            time.sleep(2)
+            print("\nTiba-tiba...\n")
+            time.sleep(4)
+            print("""                                                            
+            ┌─────────────────────────────────────────────────────────┐ 
+            │                                                         │ 
+            │                                                         │ 
+            │                                                         │ 
+            │                        ........ .                       │ 
+            │                   ...................                   │ 
+            │                ....   ⢀⣀⣤⣤⣤⣤⣴⣤⣤⣄⡀  ....             │ 
+            │              ....   ⣴⣾⠿⠛⠋⠉⠁⠀⠀⠀⠈⠙⠻⢷⣦⡀ ...           │ 
+            │               .  ⣤⣾⡿⠋⠁⠀⣠⣶⣿⡿⢿⣷⣦⡀⠀⠀⠀⠙⠿⣦⣀  ..       | 
+            │             .  ⣴⣿⡿⠋⠀⠀⢀⣼⣿⣿⡄⣶⣿⣾⣽⣿⡆⠀⠀⠀⠀⢻⣿⣷⣶⣄⠀     │ 
+            │             ⠀⣴⣿⣿⠋⠀⠀⠀⠀⠸⣿⣿⣿⣿⣯⣿⣿⣿⣿⣿⠀⠀⠀⠐⡄⡌⢻⣿⣿⡷    │ 
+            │             ⢸⣿⣿⠃⢂⡋⠄⠀⠀⠀⢿⣿⣿⣿⣿⣿⣯⣿⣿⠏⠀⠀⠀⠀⢦⣷⣿⠿⠛⠁    │ 
+            │             ⠀⠙⠿⢾⣤⡈⠙⠂⢤⢀⠀⠙⠿⢿⣿⣿⡿⠟⠁⠀⣀⣀⣤⣶⠟⠋⠁⠀⠀⠀    │ 
+            │             ⠀⠀⠀⠀⠈⠙⠿⣾⣠⣆⣅⣀⣠⣄⣤⣴⣶⣾⣽⢿⠿⠟⠋⠀⠀⠀⠀⠀⠀⠀     │ 
+            │             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠛⠙⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀       │ 
+            │                                                         │ 
+            │                                                         │ 
+            │                                                         │ 
+            │                                                         │ 
+            │                                                         │ 
+            └─────────────────────────────────────────────────────────┘""")
+            print("\nMatamu terbuka dengan sekejap!")
+            time.sleep(4)
+            print("\nKamu seolah-olah berpindah tempat ke sebuah ruangan yang familiar")
+            time.sleep(4)
+            print("\nKamu terbangun di sebuah tempat tidur yang empuk.")
+            time.sleep(4)
+            print("\nSetelah mengumpulkan kesadaran, kamu mengingat apa yang terjadi.")
+            time.sleep(4)
+            print("\nTanpa menunggu lebih lama, kamu melakukan apa yang harus kamu lakukan...")
+            time.sleep(4)
+            print("""                                                           
+            ┌─────────────────────────────────────────────────────────┐
+            │                         │    │    │       &####         │
+            │================         │====│====│      .O..###        │
+            │================         │    │    │      .....#         │
+            ├───────────┐  │          └─────────┘        ...          │
+            │ PILL      │  │                            .....        D│
+            │___        │  │           ..              .......      │ │
+            │   "-.     │  │           ...------------..... ..      │ │
+            │      \    │  │           ...---------------   ...     │ │
+            │       |   │  │      │====================================
+            │ .-.  ,|   │  │      ====================================│
+            │ \__)( |   │  │_______0_______________________________0__│
+            │\     \|   │  │       0                               0  │
+            │^     _)   │  │____________________________              │
+            │III|__/    │  │                            \             │
+            │III/ |     │  │                             \            │
+            │     /     │  │                              \           │
+            │----`──────┘  │                               \          │
+            │                                               \         │
+            ├──────────────┘                                 \        │
+            └─────────────────────────────────────────────────────────┘""")
+            time.sleep(3)
+            print("""                                                           
+            ┌─────────────────────────────────────────────────────────┐
+            │..................                                       │
+            │........................                                 │
+            │............................     ........                │
+            │  ..........................................             │
+            │          ....................................           │
+            │                ...............................          │
+            │                              ........      ...          │
+            │                                 ....         ..         │
+            │                                   ...                   │
+            │                                                         │
+            │                                       ________          │
+            │                                       ┌──────┐          │
+            │           Good Bye.                 # │┌────┐│ ##       │
+            │                                  # # #││    ││#  # #    │
+            │                                 ----------------------  │
+            │                                 ======================  │
+            │                                  │##  ##  ##  ##  ##│   │
+            │                                   │##  ## ## ##  ##│    │
+            │                                   │################│    │
+            └─────────────────────────────────────────────────────────┘""")
+            time.sleep(3)
+            print("\nSuicide is not an answer, its destruction.\n-Albert Leornes Greene\n")
+            time.sleep(3)
+            print("\n-Good Ending-")
+            time.sleep(4)
+            print("\n\n\nTHANKS FOR PLAYING\n\n\n")
+            time.sleep(2)
+            print("Games by Group 12\n\n")
+            sys.exit(1)
+        elif JawabanEnd == 'Kembali Masuk':
+            time.sleep(2)
+            print("\nKamu merasa dunia luar tak seindah di dalam.")
+            time.sleep(4)
+            Mansion()
+            print("\nKamu selamanya akan tinggal di mansion ini")
+            time.sleep(3)
+            print("\nMeskipun kamu sendirian, tapi kamu aman di dalam")
+            time.sleep(3)
+            print("\n-True Ending-")
+            time.sleep(4)
+            print("\n\n\nTHANKS FOR PLAYING\n\n\n")
+            time.sleep(2)
+            print("Games by Group 12\n\n")
+            sys.exit(1)
+        else :
+            print("\nHarap pilih sesuai opsi!") #Program tidak akan berjalan sampai pemain memasukan input sesuai pilihan
+            time.sleep(2)
 
 
 def Mansion(): #Gambar untuk ending stay
-    print("""                                          /\      /\
+    print("""                                          
+                                                       /\      /\
                                                        ||______||
                                                        || ^  ^ ||
                                                        \| |  | |/
@@ -1107,7 +1145,21 @@ def Main_menu():
         if Pilihan_Main_menu == 'Play':
             introgame()#Jika pemain memilih play, maka game akan dimulai
         elif Pilihan_Main_menu == 'Exit':
-            sys.exit(1)#Jika pemain memilih exit maka program berakhir
+            Jawaban_MainMenu = None
+            while Jawaban_MainMenu != 'Tidak':
+                print("\nApa Kamu yakin? Ya/Tidak")
+                Jawaban_MainMenu=input("...")
+                if Jawaban_MainMenu == 'Ya':
+                    print("\n\nSampai Jumpa Lagi\n\n")
+                    time.sleep(2)
+                    sys.exit(1)#Jika pemain memilih ya untuk exit maka program berakhir
+                elif Jawaban_MainMenu == 'Tidak':
+                    print("\nBagus, ayo main!")
+                    time.sleep(2)
+                    Main_menu()#Jika pemain memilih tidak, maka akn dibawa lagi ke cover gamenya
+                else:
+                    print("\nCoba lagi") #Program tidak akan berjalan sampai pemain memasukan input sesuai pilihan
+                    time.sleep(1)
         elif Pilihan_Main_menu == 'Tentang Kami':
             print("""                          
         ┌────────────────────────┐
